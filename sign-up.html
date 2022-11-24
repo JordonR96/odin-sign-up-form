@@ -4,10 +4,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Sign Up Form - Odin</title>
     <link rel="stylesheet" href="sign-up.css">
 </head>
-<body>
+<body class="fill-screen flex-container">
+    <aside class="side-container form-header">
+        <div class="title-container">
+            <img class="logo" src="./assets/images/odin-lined.png" alt="Odin Logo">
+            <h1 class="title">Odin</h1>
+        </div>
+    </aside>
+    <main class = "main-container">
+        <div class = "form__description">
+            <p>
+                This is not a real online service! You know you need something like this in your life
+                to help you realize your deepest dreams.
+            </p>
+            <p>
+                Sign up now to get started.
+            </p>
+            <p>
+                You know you want to.
+            </p>
+        </div>
+
+        
+        <form class="form-container" action="#" method="post">
+
+            <div class="form-item__container">
+                <fieldset class="name-fieldset">
+                    <div class="form-item">
+                        <label class="form-item__label" for="first_name">First Name</label>
+                        <div>
+                            <input class="form-item__input" type="text" name="first_name" id="first_name">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label class="form-item__label" for="last_name">Last Name</label>
+                        <div>
+                            <input class="form-item__input" type="text" name="last_name" id="last_name">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="contact-fieldset">
+                    <div class="form-item">
+                        <label class="form-item__label" for="email">Email</label>
+                        <div>
+                            <input class="form-item__input" type="email" name="email" id="email">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label class="form-item__label" for="phone_number">Phone Number</label>
+                        <div>
+                            <input class="form-item__input" type="tel" name="phone_number" id="phone_number">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="password-fieldset">
+                    <div class="form-item">
+                        <label class="form-item__label" for="password">Password</label>
+                        <div>
+                            <input class="form-item__input" type="password" name="password" id="password">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label class="form-item__label" for="confirm-password">Confirm Password</label>
+                        <div>
+                            <input class="form-item__input" type="password" name="confirm-password" id="confirm-password">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="form-submit__container">
+                <button class="btn btn-submit" type="submit">Submit</button>
+            </div>
+            <p>Already have an account? <a href="#" target="_blank">Log in</a></p>
+        </form>
     
+    </main>
 </body>
 </html>

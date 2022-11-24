@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.fill-screen {
+    width:100vw;
+    height: 100vh
+}
+
+.flex-container {
+    display: flex;
+}
+
+.side-container {
+    width: 32%;
+}
+
+
+.form-header {
+    background: url(./assets/images/leaves-unsplash.jpg);
+    object-fit:cover;
+    background-size: cover;
+}
+
+.main-container {
+    width: 66%;
+}
