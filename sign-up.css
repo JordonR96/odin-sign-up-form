@@ -3,8 +3,12 @@
     font-family: "Norse";
     src: url(./assets/fonts/Norse-Bold.otf);
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
+
 :root {
     --title-font: "Norse", sans-serif;
+    --font: "Inconsolata", sans-serif;
 }
 * {
     margin: 0;
@@ -22,12 +26,14 @@
 
 /* Side content */
 .side-container {
-    width: 32%;
+    width: 40vw;
     background: url(./assets/images/leaves-unsplash.jpg);
     object-fit:cover;
     background-size: cover;
     
     position: relative;
+    color: white;
+
 }
 
 .title-container {
@@ -40,7 +46,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     background-color: rgba(0,0,0, 0.3);
 }
 
@@ -53,8 +58,45 @@
     font-size: 4rem;
 }
 
+.photo-reference {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 300;
+    font-size: 14px;;
+    padding: 0.8em 0;
+}
+
+.photo-reference a {
+    color: white;
+}
 /* Main form content */
 
 .main-container {
-    width: 66%;
+    width: 60vw;
+    font-family: var(--font);
+    padding: 2em;
+}
+
+/* form description */
+.form-description {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 5em 0 2em 0;
+}
+
+.cta-text {
+    margin-top: 1em;
+}
+
+/* style the actual form */
+.form {
+    padding-right: 30%;
+}
+
+.form fieldset {
+    border: none;
+    display: flex;
+    justify-content: space-between;
 }
