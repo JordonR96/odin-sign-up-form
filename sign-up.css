@@ -15,8 +15,30 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* general input styles */
+input {
+    padding: 0.4em 0.6em;
+    border-radius: 3px;
+    border: 1px solid #E5E7EB;
+    width: clamp(150px, 100%, 270px);
+    min-width: 150px;
+}
+
+input:focus, input:invalid {
+    outline: none;
+}
+
+input:focus {
+    border: 1px solid blue;
+    box-shadow: 0 0 3px 1px rgba(0,0,0, 0.2);
+}
+
+input:invalid {
+    border: 1px solid red
+}
+
 .fill-screen {
-    width:100vw;
     height: 100vh
 }
 
@@ -26,7 +48,8 @@
 
 /* Side content */
 .side-container {
-    width: 40vw;
+    width: 30vw;
+    height: 100vh;
     background: url(./assets/images/leaves-unsplash.jpg);
     object-fit:cover;
     background-size: cover;
@@ -74,16 +97,25 @@
 /* Main form content */
 
 .main-container {
-    width: 60vw;
+    width: 70vw;
+    height: 100vh;
     font-family: var(--font);
-    padding: 2em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 /* form description */
 .form-description {
     font-size: 1.5rem;
     font-weight: 700;
-    padding: 5em 0 2em 0;
+}
+
+.form-description > *, .signup-form > * {
+    padding-left: 40px; 
+    padding-right: 20%;
 }
 
 .cta-text {
@@ -91,12 +123,57 @@
 }
 
 /* style the actual form */
-.form {
-    padding-right: 30%;
+.signup-form {
+    width: 100%;
+    margin-right: 25%;   
 }
 
-.form fieldset {
+.signup-form fieldset {
     border: none;
     display: flex;
     justify-content: space-between;
+    max-width: 800px;
+}
+
+.form-item {
+    margin: 0.5rem 1rem 0.5rem 0;
+    width: 100%;
+}
+
+.form-item__container {
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.form-item__label {
+    display: inline-block;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.2rem
+}
+
+.password-fieldset {
+    margin-top: 0.5rem;
+}
+
+.btn {
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 0.4em 3em;
+    outline: none;
+    border: none;
+}
+
+.btn-submit {
+    color: white;
+    background-color: #596D48;
+    margin: 1.4rem 0;
+}
+
+.form__footer {
+    box-shadow: 0 -2px 1px 1px rgba(50,50,50, 0.1);
+}
+
+.login-link {
+    text-decoration: none;
+    color: #596D48;
 }
